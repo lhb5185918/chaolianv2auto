@@ -23,7 +23,8 @@ data_path =project_path+os.sep+"data"
 util_path =project_path+os.sep+"util"
 
 entup_path = project_path+os.sep+"config"+os.sep+"upladent.xlsx"
-print(entup_path)
+
+testcase_path = project_path+os.sep+"config"+os.sep+"case.xlsx"
 
 class getPath:
 
@@ -62,3 +63,7 @@ class getPath:
     @staticmethod
     def get_upent():
         return entup_path
+
+    @staticmethod
+    def get_testcase():
+        return testcase_path
