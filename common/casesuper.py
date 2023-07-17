@@ -7,11 +7,10 @@ class Test_method:  # 用例数据处理
 
     @staticmethod
     def reaDcase(case):
-        number = case['用例编号']
-        title = case['用例名称']
+        number = case['number']
+        title = case['title']
         method = case['method']
         url = case['url']
-        header =json.loads(case['header'])
         data = case['data']
         if data !=None and data!='':
             data = json.loads(case['data'])
@@ -21,6 +20,5 @@ class Test_method:  # 用例数据处理
                        'title': title,
                        'method': method,
                        'url': url,
-                       'header': header,
                        'data': data}
         return dict_result

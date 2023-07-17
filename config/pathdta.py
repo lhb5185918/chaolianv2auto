@@ -2,6 +2,10 @@ import os
 
 import time
 
+log_time = time.strftime("%Y %D")
+
+log_file_time = "{}_{}_{}.log".format(log_time[0:4],log_time[5:7],log_time[8:10])
+
 local_path = os.path.abspath(__file__)
 
 project_path = os.path.dirname(os.path.dirname(local_path))
@@ -16,7 +20,7 @@ report_path =project_path+os.sep+"report"
 
 setting_path =project_path+os.sep+"setting"
 
-case_path =project_path+os.sep+"case"
+case_path =project_path+os.sep+"config"+os.sep+"case.xlsx"
 
 data_path =project_path+os.sep+"data"
 
@@ -25,6 +29,9 @@ util_path =project_path+os.sep+"util"
 entup_path = project_path+os.sep+"config"+os.sep+"upladent.xlsx"
 
 testcase_path = project_path+os.sep+"config"+os.sep+"case.xlsx"
+
+
+logfile_path = project_path+os.sep+"log"+os.sep+log_file_time
 
 class getPath:
 

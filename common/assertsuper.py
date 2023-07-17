@@ -1,0 +1,3 @@
+
+res = {'code': 200, 'body': {'code': 200, 'success': True, 'data': {'total': 2, 'docs': [{'highlight': {'chainName': {'text': '<em>高</em><em>端</em>装备<em>制</em><em>造</em>'}}, 'chainName': '高端装备制造', 'labelType': 'chain', 'id': '114', 'label': '高端装备制造', 'labelTypeName': '产业链名称匹配'}, {'nodeName': '高端装备制造行业工业互联网平台', 'highlight': {'nodeName': {'text': '<em>高</em><em>端</em>装备<em>制</em><em>造</em>行业工业互联网平台'}}, 'chainName': '工业互联网', 'labelType': 'node', 'id': '115020205', 'label': '高端装备制造行业工业互联网平台(工业互联网)', 'labelTypeName': '产业链节点匹配'}], 'gatewayParam': None, 'operateWord': None, 'aggregations': None}, 'msg': '操作成功'}, 'cookies': {}}
+

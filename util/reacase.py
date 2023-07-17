@@ -1,7 +1,7 @@
 import xlrd
 from openpyxl import load_workbook
-from config.pathdta import log_path
-from config.pathdta import testcase_path
+from config.pathdta import logfile_path
+from config.pathdta import case_path
 
 
 class Case_operation:
@@ -24,18 +24,19 @@ class Case_operation:
             case.append(r)
         return case
 
-    def write_result(self, res, xulie):  # 测试结果写入
-        wb = open(file=log_path, mode='r', encoding='utf-8').readlines() # 打开log文件并读取log文件
-        wc = load_workbook(testcase_path)  # 打开excle文件
+    def write_result(self,xulie):  # 测试结果写入
+        wb = open(file=logfile_path, mode='r', encoding='utf-8').readlines() # 打开log文件并读取log文件
+        wc = load_workbook(case_path)  # 打开excle文件
         data = []
         l = []
         for i in wb:
             data.append(i)  # 将文本文件的值存储至列表中
         for a in data:
-            if res in a:
-                ws = wc.active
-                sheet = wc.worksheets[xulie]
-                l.append(a)
+            ws = wc.active
+            sheet = wc.worksheets[xulie]
+            l.append(a)
         for i in range(len(l)):
-            sheet.cell(i + 2, 8).value = l[i]
-        wc.save(testcase_path)
+            sheet.cell(i + 2, 6).value = l[i]
+        wc.save(case_path)
+
+
